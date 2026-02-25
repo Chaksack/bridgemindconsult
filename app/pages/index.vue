@@ -8,6 +8,9 @@ const loading = ref(false)
 const success = ref<string | null>(null)
 const error = ref<string | null>(null)
 
+  import logoUrl from '../assets/logo.png'
+
+
 useHead({
   title: 'BridgeMind Consult — Coming Soon',
   meta: [
@@ -47,11 +50,11 @@ async function submitForm() {
   <div>
     <section class="min-h-[80vh] border-b border-white/10">
       <div class="mx-auto max-w-3xl px-4 py-20 md:py-28 text-center">
-        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-300">BridgeMind Consult</p>
+         <img :src="logoUrl" alt="BridgeMind Consult logo" class="h-36 w-full object-contain p-1" />
         <h1 class="mt-4 text-4xl font-semibold leading-tight tracking-tight text-white md:text-6xl">
           We’re building something new.
         </h1>
-        <p class="mt-5 text-base leading-7 text-slate-300 md:text-lg">Our website is coming soon. In the meantime, get in touch below.</p>
+        <p class="mt-5 text-base leading-7 text-slate-300 md:text-lg">For inquires get in touch below.</p>
 
         <form class="mt-10 text-left" @submit.prevent="submitForm">
           <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
