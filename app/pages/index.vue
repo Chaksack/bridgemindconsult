@@ -94,7 +94,7 @@ async function submitForm() {
 
     <section>
       <div class="mx-auto max-w-6xl px-4 py-10 text-center text-slate-400 text-xs">
-        © {{ new Date().getFullYear() }} BridgeMind Consult • Coming Soon
+        © {{ new Date().getFullYear() }} BridgeMind Consult. All rights reserved.
       </div>
     </section>
   </div>
