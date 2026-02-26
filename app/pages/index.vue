@@ -56,6 +56,15 @@ async function submitForm() {
         </h1>
         <p class="mt-5 text-base leading-7 text-slate-300 md:text-lg">For inquires get in touch below.</p>
 
+        <!-- <a
+          href="https://calendly.com/app/scheduling/meeting_types/user/me"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-8 inline-flex items-center justify-center rounded-md bg-violet-500/15 px-5 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-violet-100 ring-1 ring-inset ring-white/10 hover:bg-violet-500/20"
+        >
+          Schedule a call
+        </a> -->
+
         <form class="mt-10 text-left" @submit.prevent="submitForm">
           <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
             <div class="grid gap-4">

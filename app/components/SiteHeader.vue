@@ -12,6 +12,14 @@
       </nav>
 
       <div class="flex items-center gap-3">
+        <a
+          href="https://calendly.com/app/scheduling/meeting_types/user/me"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex rounded-md bg-violet-500/15 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-violet-100 ring-1 ring-inset ring-white/10 hover:bg-violet-500/20"
+        >
+          Schedule a call
+        </a>
       </div>
     </div>
   </header>
