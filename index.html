@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BridgeMind Consult — Personal-scale management consulting for enterprises across Ghana and West Africa. Specialists in Financial Services, Information Technology and Energy." />
+  <meta name="theme-color" content="#FFFFFF" />
+  <title>BridgeMind Consult — Management Consulting for West Africa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ink: #0B0F19;
+      --ink-2: #1F2937;
+      --muted: #6B7280;
+      --muted-2: #9CA3AF;
+      --line: #E7E7EA;
+      --line-soft: #F2F2F4;
+      --bg: #FFFFFF;
+      --bg-soft: #FAFAFA;
+      --accent: #B8945F;
+      --accent-soft: #F5EFE3;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      --container: 1140px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: var(--ink); text-decoration: none; }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+      outline: 2px solid var(--ink);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    .container {
+      max-width: var(--container);
+      padding: 0 28px;
+      margin: 0 auto;
+    }
+    @media (max-width: 480px) { .container { padding: 0 20px; } }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .eyebrow .dot {
+      display: inline-block;
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--accent);
+      margin-right: 10px;
+      transform: translateY(-2px);
+    }
+
+    /* ---------- HEADER ---------- */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: saturate(180%) blur(8px);
+      -webkit-backdrop-filter: saturate(180%) blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      gap: 24px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--ink);
+      letter-spacing: 0.2px;
+    }
+    .brand-mark {
+      width: 28px; height: 28px;
+      flex-shrink: 0;
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+      margin: 0; padding: 0;
+    }
+    .nav-links a {
+      color: var(--ink-2);
+      font-weight: 400;
+      font-size: 14.5px;
+      transition: color 150ms ease;
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--ink);
+      color: #fff !important;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 500;
+      font-size: 14px;
+      transition: background 200ms ease;
+      min-height: 40px;
+    }
+    .nav-cta:hover { background: #000; }
+
+    .nav-toggle {
+      display: none;
+      background: transparent; border: 1px solid var(--line);
+      width: 40px; height: 40px; border-radius: 8px;
+      align-items: center; justify-content: center; cursor: pointer;
+      color: var(--ink);
+    }
+
+    @media (max-width: 880px) {
+      .nav-links {
+        position: absolute; top: 70px; left: 0; right: 0;
+        flex-direction: column; gap: 0;
+        background: #fff;
+        border-bottom: 1px solid var(--line);
+        padding: 8px 28px 18px;
+        max-height: 0; overflow: hidden;
+        transition: max-height 250ms ease;
+      }
+      .nav-links.open { max-height: 480px; }
+      .nav-links li { width: 100%; border-bottom: 1px solid var(--line-soft); }
+      .nav-links li:last-child { border-bottom: 0; padding-top: 10px; }
+      .nav-links a { display: block; padding: 14px 0; }
+      .nav-toggle { display: inline-flex; }
+    }
+
+    /* ---------- BUTTONS ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 48px; padding: 0 22px;
+      border-radius: 999px;
+      font-weight: 500; font-size: 15px;
+      cursor: pointer; border: 1px solid transparent;
+      transition: background 200ms ease, color 200ms ease, border-color 200ms ease, transform 200ms ease;
+    }
+    .btn-primary { background: var(--ink); color: #fff; }
+    .btn-primary:hover { background: #000; }
+    .btn-outline { background: #fff; color: var(--ink); border-color: var(--line); }
+    .btn-outline:hover { border-color: var(--ink); }
+    .btn-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 14.5px; color: var(--ink); font-weight: 500;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 2px;
+      transition: border-color 200ms ease;
+    }
+    .btn-link:hover { border-color: var(--ink); }
+
+    /* ---------- HERO ---------- */
+    .hero { background: var(--bg); border-bottom: 1px solid var(--line); }
+    .hero-inner {
+      padding: 120px 0 100px;
+      max-width: 880px;
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(36px, 6.4vw, 72px);
+      line-height: 1.05;
+      margin: 28px 0 28px;
+      letter-spacing: -1px;
+      color: var(--ink);
+    }
+    .hero h1 .accent { font-style: italic; font-weight: 400; color: var(--ink); }
+    .hero p.lede {
+      font-size: 19px;
+      line-height: 1.55;
+      color: var(--muted);
+      max-width: 60ch;
+      margin: 0 0 40px;
+    }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    .hero-meta {
+      margin-top: 96px;
+      padding-top: 36px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 720px;
+    }
+    .hero-meta .meta-item .num {
+      font-family: var(--serif); color: var(--ink); font-size: 32px; line-height: 1; font-weight: 500;
+    }
+    .hero-meta .meta-item .lbl {
+      color: var(--muted); font-size: 13.5px; margin-top: 10px; display: block; line-height: 1.4;
+    }
+
+    @media (max-width: 920px) {
+      .hero-inner { padding: 80px 0 72px; }
+      .hero-meta { margin-top: 64px; }
+    }
+    @media (max-width: 560px) {
+      .hero-inner { padding: 56px 0 48px; }
+      .hero p.lede { font-size: 17px; margin-bottom: 32px; }
+      .hero-meta { margin-top: 48px; gap: 18px; padding-top: 28px; }
+      .hero-meta .meta-item .num { font-size: 24px; }
+      .hero-meta .meta-item .lbl { font-size: 12px; margin-top: 6px; }
+    }
+    @media (max-width: 480px) {
+      .hero-cta .btn { width: 100%; }
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section { padding: 120px 0; border-bottom: 1px solid var(--line); }
+    @media (max-width: 720px) { section { padding: 80px 0; } }
+
+    .section-head { max-width: 720px; margin-bottom: 72px; }
+    .section-head h2 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.15;
+      margin: 20px 0 18px;
+      color: var(--ink);
+      letter-spacing: -0.5px;
+    }
+    .section-head p {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 60ch;
+      margin: 0;
+    }
+    @media (max-width: 720px) { .section-head { margin-bottom: 48px; } .section-head p { font-size: 16.5px; } }
+
+    /* ---------- ABOUT ---------- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    @media (max-width: 920px) { .about-grid { grid-template-columns: 1fr; gap: 56px; } }
+
+    .about-lead p {
+      color: var(--ink-2);
+      font-size: 17px;
+      line-height: 1.65;
+      margin: 0 0 16px;
+      max-width: 56ch;
+    }
+    .about-points { display: grid; gap: 36px; }
+    .about-point {
+      display: grid; grid-template-columns: 32px 1fr; gap: 18px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--line-soft);
+    }
+    .about-point:last-child { border-bottom: 0; padding-bottom: 0; }
+    .about-point .icon {
+      color: var(--ink);
+      display: flex; align-items: flex-start; justify-content: center;
+      padding-top: 4px;
+    }
+    .about-point h4 { margin: 0 0 6px; font-size: 16px; color: var(--ink); font-weight: 600; }
+    .about-point p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.55; }
+
+    /* ---------- SERVICES ---------- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+    @media (max-width: 980px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px) { .services-grid { grid-template-columns: 1fr; } }
+
+    .service-card {
+      padding: 36px 32px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+      transition: background 250ms ease;
+    }
+    .service-card:hover { background: var(--bg-soft); }
+    .service-card .svc-num {
+      font-family: var(--serif);
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      margin-bottom: 28px;
+      display: block;
+    }
+    .service-card h3 {
+      font-family: var(--serif); font-size: 22px; margin: 0 0 12px; color: var(--ink); font-weight: 500;
+      line-height: 1.25;
+    }
+    .service-card p { margin: 0 0 20px; color: var(--muted); font-size: 14.5px; line-height: 1.6; }
+    .service-card ul {
+      list-style: none; padding: 0; margin: 0;
+      display: grid; gap: 8px;
+    }
+    .service-card li {
+      font-size: 13.5px; color: var(--ink-2);
+      padding-left: 16px;
+      position: relative;
+    }
+    .service-card li::before {
+      content: ""; width: 6px; height: 1px; background: var(--ink);
+      position: absolute; left: 0; top: 11px;
+    }
+
+    /* ---------- INDUSTRIES ---------- */
+    .industries-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+    }
+    @media (max-width: 920px) { .industries-grid { grid-template-columns: 1fr; gap: 24px; } }
+
+    .industry-card {
+      padding: 36px 32px;
+      border: 1px solid var(--line);
+      background: #fff;
+      transition: border-color 250ms ease;
+    }
+    .industry-card:hover { border-color: var(--ink); }
+    .industry-card .ind-icon {
+      width: 36px; height: 36px;
+      color: var(--ink);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 28px;
+    }
+    .industry-card h3 {
+      font-family: var(--serif); font-size: 22px; color: var(--ink); margin: 0 0 12px; font-weight: 500;
+    }
+    .industry-card p { color: var(--muted); font-size: 14.5px; margin: 0 0 24px; line-height: 1.6; }
+    .industry-card .tag-row { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+    .industry-card .tag {
+      font-size: 12.5px; font-weight: 400;
+      color: var(--ink-2);
+      letter-spacing: 0.02em;
+      position: relative; padding-left: 14px;
+    }
+    .industry-card .tag::before {
+      content: ""; width: 4px; height: 4px; border-radius: 50%;
+      background: var(--accent);
+      position: absolute; left: 0; top: 7px;
+    }
+
+    /* ---------- APPROACH ---------- */
+    .approach-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+      border-top: 1px solid var(--line);
+    }
+    @media (max-width: 900px) { .approach-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .approach-grid { grid-template-columns: 1fr; } }
+    .step {
+      padding: 36px 32px 36px 0;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+    .step:not(:last-child) { border-right: 1px solid var(--line); }
+    .step { padding: 36px 32px; }
+    .step-num {
+      font-family: var(--serif);
+      color: var(--muted-2);
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 24px;
+      display: block;
+      letter-spacing: 0.05em;
+    }
+    .step h4 {
+      font-family: var(--serif); font-weight: 500;
+      margin: 0 0 10px; color: var(--ink); font-size: 20px;
+    }
+    .step p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.6; }
+
+    /* ---------- TEAM ---------- */
+    .team-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px 32px;
+    }
+    @media (max-width: 900px) { .team-grid { grid-template-columns: repeat(2, 1fr); gap: 48px 28px; } }
+    @media (max-width: 600px) { .team-grid { grid-template-columns: 1fr; gap: 40px; } }
+    .person { }
+    .person .avatar {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: #fff;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif); font-size: 22px; font-weight: 500;
+      margin-bottom: 24px;
+      letter-spacing: 1px;
+    }
+    .person h4 {
+      font-family: var(--serif); font-weight: 500;
+      margin: 0 0 6px; font-size: 20px; color: var(--ink);
+    }
+    .person .role {
+      font-size: 12.5px; color: var(--muted); font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      margin: 0 0 16px;
+    }
+    .person p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.6; }
+
+    /* ---------- CONTACT ---------- */
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: start;
+    }
+    @media (max-width: 920px) { .contact-grid { grid-template-columns: 1fr; gap: 56px; } }
+
+    .contact-info h2 {
+      font-family: var(--serif); font-weight: 400;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.15;
+      margin: 20px 0 20px;
+      color: var(--ink);
+      letter-spacing: -0.5px;
+    }
+    .contact-info > p { color: var(--muted); margin: 0 0 36px; font-size: 17px; line-height: 1.6; max-width: 50ch; }
+    .contact-list { display: grid; gap: 18px; padding: 0; margin: 0; list-style: none; padding-top: 28px; border-top: 1px solid var(--line); }
+    .contact-list li { display: grid; grid-template-columns: 24px 1fr; gap: 16px; align-items: start; }
+    .contact-list .ico { color: var(--ink); padding-top: 2px; display: flex; }
+    .contact-list span { font-size: 14.5px; color: var(--ink-2); }
+    .contact-list a { color: var(--ink); border-bottom: 1px solid var(--line); padding-bottom: 1px; }
+    .contact-list a:hover { border-color: var(--ink); }
+
+    .form-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      padding: 40px;
+    }
+    @media (max-width: 560px) { .form-card { padding: 28px 24px; } }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+    @media (max-width: 560px) { .form-row { grid-template-columns: 1fr; gap: 16px; } }
+    .field { display: flex; flex-direction: column; gap: 8px; }
+    .field label {
+      font-size: 12.5px; color: var(--muted); font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .field label .req { color: var(--accent); margin-left: 2px; }
+    .field input, .field select, .field textarea {
+      font: inherit; color: var(--ink);
+      padding: 12px 0;
+      min-height: 44px;
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      border-radius: 0;
+      transition: border-color 150ms ease;
+      width: 100%;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    .field select {
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'><path d='M1 1 L6 6 L11 1' stroke='%236B7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 4px center;
+      padding-right: 24px;
+    }
+    .field textarea { min-height: 120px; resize: vertical; padding: 12px 0; }
+    .field input:focus, .field select:focus, .field textarea:focus {
+      outline: none;
+      border-color: var(--ink);
+    }
+    .field .helper { font-size: 12.5px; color: var(--muted-2); margin-top: 4px; }
+    .form-actions {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      margin-top: 28px; flex-wrap: wrap;
+      padding-top: 24px; border-top: 1px solid var(--line);
+    }
+    .form-note { font-size: 12.5px; color: var(--muted); }
+
+    .form-status {
+      margin-top: 16px;
+      padding: 14px 16px;
+      font-size: 14px;
+      display: none;
+      border-left: 2px solid;
+    }
+    .form-status.success { display: block; background: #fff; color: var(--ink); border-color: var(--accent); }
+    .form-status.error { display: block; background: #fff; color: var(--ink); border-color: #B91C1C; }
+
+    /* ---------- FOOTER ---------- */
+    .site-footer {
+      background: #fff;
+      color: var(--muted);
+      padding: 72px 0 32px;
+      border-bottom: 0;
+    }
+    section.last { border-bottom: 0; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 56px;
+    }
+    @media (max-width: 820px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+    @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+    .footer-brand p { font-size: 14px; margin: 16px 0 0; max-width: 36ch; color: var(--muted); line-height: 1.6; }
+    .footer-col h5 {
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--ink);
+      margin: 0 0 18px;
+    }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+    .footer-col a { color: var(--muted); font-size: 14px; transition: color 150ms ease; }
+    .footer-col a:hover { color: var(--ink); }
+    .footer-bottom {
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 12.5px; flex-wrap: wrap; gap: 12px;
+      color: var(--muted-2);
+    }
+
+    /* ---------- UTIL ---------- */
+    .skip-link {
+      position: absolute; left: 12px; top: -40px;
+      background: var(--ink); color: #fff;
+      padding: 8px 12px; font-weight: 500;
+      transition: top 200ms ease;
+      z-index: 100;
+    }
+    .skip-link:focus { top: 12px; color: #fff; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="brand" aria-label="BridgeMind Consult — Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 22 L16 10 L28 22" stroke="#0B0F19" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M4 22 H28" stroke="#0B0F19" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="16" cy="10" r="1.6" fill="#B8945F"/>
+          </svg>
+        </span>
+        BridgeMind
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+
+      <ul id="primary-nav" class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#industries">Industries</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#team">Leadership</a></li>
+        <li><a class="nav-cta" href="#contact">
+          Speak with us
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-inner">
+          <span class="eyebrow"><span class="dot"></span>Ghana &middot; West Africa</span>
+          <h1 id="hero-title">
+            Boutique consulting.<br/>
+            <span class="accent">Enterprise outcomes.</span>
+          </h1>
+          <p class="lede">
+            BridgeMind partners with leaders across Ghana and the West African sub-region to solve their hardest commercial, technology and operational challenges &mdash; with the rigour of a global firm and the responsiveness of a trusted local team.
+          </p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">
+              Start a conversation
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#services" class="btn btn-outline">Explore our services</a>
+          </div>
+
+          <div class="hero-meta" role="list">
+            <div class="meta-item" role="listitem">
+              <span class="num">3</span>
+              <span class="lbl">Sectors of deep expertise</span>
+            </div>
+            <div class="meta-item" role="listitem">
+              <span class="num">15+</span>
+              <span class="lbl">Years of combined leadership</span>
+            </div>
+            <div class="meta-item" role="listitem">
+              <span class="num">1:1</span>
+              <span class="lbl">Senior partner attention</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow"><span class="dot"></span>About BridgeMind</span>
+          <h2 id="about-title">A small firm built for the questions that matter most.</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-lead">
+            <p>
+              We were founded on a simple belief: West African enterprises deserve consulting partners who understand the local context as deeply as the global benchmarks. BridgeMind brings the discipline of firms like KPMG and Accenture &mdash; without the layers, the handovers or the impersonal experience.
+            </p>
+            <p>
+              Every engagement is led by a senior practitioner who stays with you from first conversation to final outcome. We work in small, embedded teams, share a single point of accountability, and price our work to be accessible to ambitious mid-market and large enterprise clients alike.
+            </p>
+          </div>
+
+          <div class="about-points">
+            <div class="about-point">
+              <div class="icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L15 9 L22 10 L17 15 L18 22 L12 18 L6 22 L7 15 L2 10 L9 9 Z"/></svg>
+              </div>
+              <div>
+                <h4>Senior-led delivery</h4>
+                <p>The partner you meet is the partner who delivers &mdash; no rotating teams of juniors.</p>
+              </div>
+            </div>
+            <div class="about-point">
+              <div class="icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+              </div>
+              <div>
+                <h4>Regional context, global rigour</h4>
+                <p>Frameworks proven at world-class firms, applied with intimate knowledge of Ghana and the sub-region.</p>
+              </div>
+            </div>
+            <div class="about-point">
+              <div class="icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div>
+                <h4>Outcomes, not decks</h4>
+                <p>We measure ourselves by the change you ship &mdash; revenue won, costs out, risk reduced.</p>
+              </div>
+            </div>
+            <div class="about-point">
+              <div class="icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <h4>Embedded, not extractive</h4>
+                <p>We coach your people as we go, leaving capability behind &mdash; not dependency.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow"><span class="dot"></span>Our Services</span>
+          <h2 id="services-title">Advisory and execution across the value chain.</h2>
+          <p>From strategic clarity to hands-on delivery, our practice areas are designed to meet enterprises wherever they are on their journey.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="svc-num">01</span>
+            <h3>Strategy &amp; Growth</h3>
+            <p>Sharpen your market position and unlock new sources of value with disciplined strategic thinking.</p>
+            <ul>
+              <li>Corporate &amp; business unit strategy</li>
+              <li>Market entry &amp; expansion in West Africa</li>
+              <li>Commercial due diligence</li>
+              <li>Operating model design</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <span class="svc-num">02</span>
+            <h3>Finance &amp; Risk</h3>
+            <p>Strengthen your finance function, governance and risk posture for sustainable growth.</p>
+            <ul>
+              <li>Finance transformation &amp; FP&amp;A uplift</li>
+              <li>Enterprise risk &amp; internal controls</li>
+              <li>Regulatory &amp; compliance advisory</li>
+              <li>Treasury &amp; capital optimisation</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <span class="svc-num">03</span>
+            <h3>Technology &amp; Digital</h3>
+            <p>Modernise your platforms and turn data into a decisive advantage &mdash; without the over-engineering.</p>
+            <ul>
+              <li>IT strategy &amp; enterprise architecture</li>
+              <li>Cloud, ERP &amp; core systems advisory</li>
+              <li>Data, analytics &amp; AI enablement</li>
+              <li>Cybersecurity &amp; resilience</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <span class="svc-num">04</span>
+            <h3>Operations Excellence</h3>
+            <p>Take cost out, lift productivity, and design operations that scale with confidence.</p>
+            <ul>
+              <li>Process re-engineering &amp; lean</li>
+              <li>Procurement &amp; supply chain</li>
+              <li>Performance management systems</li>
+              <li>Service design &amp; customer ops</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <span class="svc-num">05</span>
+            <h3>People &amp; Change</h3>
+            <p>Make sure the change actually sticks &mdash; with leadership, capability and culture aligned to it.</p>
+            <ul>
+              <li>Organisation design</li>
+              <li>Change management &amp; adoption</li>
+              <li>Leadership &amp; talent development</li>
+              <li>Culture &amp; performance</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <span class="svc-num">06</span>
+            <h3>Project &amp; Programme</h3>
+            <p>Bring your most critical initiatives in on time, on budget, and on outcome.</p>
+            <ul>
+              <li>PMO setup &amp; programme governance</li>
+              <li>Transformation delivery</li>
+              <li>Vendor &amp; partner management</li>
+              <li>Independent project assurance</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section id="industries" aria-labelledby="industries-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow"><span class="dot"></span>Industries we serve</span>
+          <h2 id="industries-title">Three sectors. Deep expertise. Tangible impact.</h2>
+          <p>We focus our practice where we can be genuinely excellent &mdash; sectors that drive Ghana and West Africa forward.</p>
+        </div>
+
+        <div class="industries-grid">
+          <article class="industry-card">
+            <div class="ind-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20"/><path d="M4 22V10l8-6 8 6v12"/><path d="M9 22v-6h6v6"/></svg>
+            </div>
+            <h3>Financial Services</h3>
+            <p>Banks, insurers, fintechs and capital markets players navigating new regulation, customer expectations and digital competition.</p>
+            <div class="tag-row">
+              <span class="tag">Banking</span>
+              <span class="tag">Insurance</span>
+              <span class="tag">Fintech</span>
+              <span class="tag">Risk &amp; Compliance</span>
+            </div>
+          </article>
+
+          <article class="industry-card">
+            <div class="ind-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Information Technology</h3>
+            <p>IT-enabled enterprises and technology firms scaling platforms, modernising legacy estates and turning data into a competitive edge.</p>
+            <div class="tag-row">
+              <span class="tag">Cloud &amp; ERP</span>
+              <span class="tag">Data &amp; AI</span>
+              <span class="tag">Cybersecurity</span>
+              <span class="tag">Digital Products</span>
+            </div>
+          </article>
+
+          <article class="industry-card">
+            <div class="ind-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3>Energy &amp; Resources</h3>
+            <p>Power utilities, oil &amp; gas operators and renewables developers managing transition, regulation and operational performance.</p>
+            <div class="tag-row">
+              <span class="tag">Power &amp; Utilities</span>
+              <span class="tag">Oil &amp; Gas</span>
+              <span class="tag">Renewables</span>
+              <span class="tag">Energy Transition</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section id="approach" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow"><span class="dot"></span>How we work</span>
+          <h2 id="approach-title">A four-step engagement model built for clarity and momentum.</h2>
+          <p>Most BridgeMind engagements move from first conversation to first measurable outcome in under 90 days.</p>
+        </div>
+
+        <div class="approach-grid">
+          <div class="step">
+            <span class="step-num">01</span>
+            <h4>Listen</h4>
+            <p>A senior partner spends time with you and your team to fully understand the question, the constraints and the ambition.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">02</span>
+            <h4>Frame</h4>
+            <p>We agree a focused scope, decision rights and the specific outcomes we will be measured on &mdash; in writing, before we start.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">03</span>
+            <h4>Deliver</h4>
+            <p>Embedded teams work alongside yours, sharing analysis, options and recommendations in short, weekly cycles.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">04</span>
+            <h4>Hand over</h4>
+            <p>We close every engagement with the artefacts, training and playbooks your team needs to sustain the change.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" aria-labelledby="team-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow"><span class="dot"></span>Leadership</span>
+          <h2 id="team-title">Senior practitioners with the scars and the receipts.</h2>
+          <p>Our partners have led engagements at global firms and inside major enterprises across the region. You work with them directly &mdash; not behind a wall of analysts.</p>
+        </div>
+
+        <div class="team-grid">
+          <article class="person">
+            <div class="avatar" aria-hidden="true">MA</div>
+            <h4>Managing Partner</h4>
+            <p class="role">Strategy &amp; Financial Services</p>
+            <p>Two decades advising West African banks and insurers on growth, risk and transformation. Former senior leader at a global Big Four firm.</p>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true">TP</div>
+            <h4>Technology Partner</h4>
+            <p class="role">IT, Data &amp; Digital</p>
+            <p>Architect and programme leader behind core banking, ERP and data platform implementations across Ghana, Nigeria and C&ocirc;te d&rsquo;Ivoire.</p>
+          </article>
+          <article class="person">
+            <div class="avatar" aria-hidden="true">EP</div>
+            <h4>Energy Partner</h4>
+            <p class="role">Energy &amp; Operations</p>
+            <p>Operational and commercial leadership across power utilities and oil &amp; gas, with a focus on performance turnaround and energy transition strategy.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="last" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <span class="eyebrow"><span class="dot"></span>Contact us</span>
+            <h2 id="contact-title">Tell us about the question on your desk.</h2>
+            <p>
+              Send us a short note about what you&rsquo;re working on. A partner will respond personally within two business days to set up an initial conversation &mdash; no obligation, no sales pitch.
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                <span class="ico" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </span>
+                <span><a href="mailto:info@bridgemindconsult.com">info@bridgemindconsult.com</a></span>
+              </li>
+              <li>
+                <span class="ico" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <span>Accra, Ghana &middot; serving West Africa</span>
+              </li>
+              <li>
+                <span class="ico" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </span>
+                <span>Mon&ndash;Fri &middot; 9:00&ndash;18:00 GMT</span>
+              </li>
+            </ul>
+          </div>
+
+          <form class="form-card" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Full name <span class="req" aria-hidden="true">*</span></label>
+                <input id="name" name="name" type="text" autocomplete="name" required aria-required="true" />
+              </div>
+              <div class="field">
+                <label for="email">Work email <span class="req" aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required aria-required="true" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="company">Company</label>
+                <input id="company" name="company" type="text" autocomplete="organization" />
+              </div>
+              <div class="field">
+                <label for="industry">Industry</label>
+                <select id="industry" name="industry">
+                  <option value="">Select an industry</option>
+                  <option>Financial Services</option>
+                  <option>Information Technology</option>
+                  <option>Energy &amp; Resources</option>
+                  <option>Public Sector</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field" style="margin-bottom: 20px;">
+              <label for="topic">How can we help? <span class="req" aria-hidden="true">*</span></label>
+              <select id="topic" name="topic" required aria-required="true">
+                <option value="">Select a topic</option>
+                <option>Strategy &amp; Growth</option>
+                <option>Finance &amp; Risk</option>
+                <option>Technology &amp; Digital</option>
+                <option>Operations Excellence</option>
+                <option>People &amp; Change</option>
+                <option>Project &amp; Programme</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Tell us a little more <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" required aria-required="true" placeholder="A few sentences about the situation, the outcome you're hoping for, and any timing considerations."></textarea>
+              <span class="helper">Your message will open in your default email client, addressed to our partner team.</span>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">
+                Send message
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+              <span class="form-note">We respond within 2 business days.</span>
+            </div>
+
+            <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="brand" aria-label="BridgeMind home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 22 L16 10 L28 22" stroke="#0B0F19" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M4 22 H28" stroke="#0B0F19" stroke-width="1.6" stroke-linecap="round"/>
+                <circle cx="16" cy="10" r="1.6" fill="#B8945F"/>
+              </svg>
+            </span>
+            BridgeMind
+          </a>
+          <p>Boutique management consulting for enterprises in Ghana and the West African sub-region.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="#services">Strategy &amp; Growth</a></li>
+            <li><a href="#services">Finance &amp; Risk</a></li>
+            <li><a href="#services">Technology &amp; Digital</a></li>
+            <li><a href="#services">Operations Excellence</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Industries</h5>
+          <ul>
+            <li><a href="#industries">Financial Services</a></li>
+            <li><a href="#industries">Information Technology</a></li>
+            <li><a href="#industries">Energy &amp; Resources</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Firm</h5>
+          <ul>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#team">Leadership</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="mailto:info@bridgemindconsult.com">info@bridgemindconsult.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> BridgeMind Consult. All rights reserved.</span>
+        <span>Accra, Ghana &middot; Serving West Africa</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Contact form -> mailto
+    (function () {
+      var form = document.getElementById('contactForm');
+      var status = document.getElementById('formStatus');
+      if (!form) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        status.className = 'form-status';
+        status.textContent = '';
+
+        var name = form.name.value.trim();
+        var email = form.email.value.trim();
+        var company = form.company.value.trim();
+        var industry = form.industry.value;
+        var topic = form.topic.value;
+        var message = form.message.value.trim();
+
+        if (!name || !email || !topic || !message) {
+          status.classList.add('error');
+          status.textContent = 'Please fill in your name, email, topic and message.';
+          var firstInvalid = form.querySelector('[required]:invalid') || form.querySelector('[required]');
+          if (firstInvalid) firstInvalid.focus();
+          return;
+        }
+
+        var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRe.test(email)) {
+          status.classList.add('error');
+          status.textContent = 'That email address looks off — could you double-check it?';
+          form.email.focus();
+          return;
+        }
+
+        var subject = '[Website enquiry] ' + (topic || 'New enquiry') + ' — ' + (company || name);
+        var body =
+          'Name: ' + name + '\n' +
+          'Email: ' + email + '\n' +
+          'Company: ' + (company || '—') + '\n' +
+          'Industry: ' + (industry || '—') + '\n' +
+          'Topic: ' + topic + '\n\n' +
+          'Message:\n' + message + '\n';
+
+        var mailto = 'mailto:info@bridgemindconsult.com'
+          + '?subject=' + encodeURIComponent(subject)
+          + '&body=' + encodeURIComponent(body);
+
+        window.location.href = mailto;
+
+        status.classList.add('success');
+        status.textContent = "Thanks — your email client should be opening with your message ready to send. If nothing happens, please write to info@bridgemindconsult.com directly.";
+      });
+    })();
+  </script>
+</body>
+</html>
