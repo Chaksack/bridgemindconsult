@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="BridgeMind Consult — senior-led consulting, managed IT, cybersecurity, cloud and growth marketing for enterprises across Ghana and West Africa." />
+  <meta name="description" content="BridgeMind Consult — senior-led technology and marketing consultancy: managed IT, cybersecurity, cloud, data &amp; AI, digital marketing and brand for businesses across Ghana and West Africa." />
   <script>document.documentElement.classList.add('js');</script>
   <meta name="theme-color" content="#FDFCFC" />
   <meta name="color-scheme" content="light" />
-  <title>BridgeMind Consult — Management Consulting for West Africa</title>
+  <title>BridgeMind Consult — Technology &amp; Marketing Consultancy for West Africa</title>
   <link rel="icon" type="image/png" href="logo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -407,6 +407,22 @@
       font-size: 26px; line-height: 1.2; letter-spacing: -0.02em;
     }
     .practice p { font-size: 14px; line-height: 1.6; color: var(--graphite); }
+    .practices .practice-body { margin-top: 0; flex: 1; display: flex; flex-direction: column; align-items: flex-start; }
+    .practices .practice-list { align-self: stretch; }
+    .practices .practice-link { margin-top: auto; padding-top: 20px; }
+    .practice-kind { display: inline-flex; align-items: center; gap: 8px; }
+    .practice-kind .dot { margin-left: 4px; }
+    .practice-list { margin-top: 20px; border-top: 1px solid var(--stone-3); }
+    .practice-list li {
+      padding: 10px 0; border-bottom: 1px solid var(--stone-3);
+      font-size: 14px; line-height: 1.45; color: var(--ink);
+    }
+    .practice-link {
+      margin-top: 20px; display: inline-flex; align-items: center; gap: 6px;
+      font-size: 14px; font-weight: 500; color: var(--ink); text-decoration: none;
+    }
+    .practice-link svg { transition: transform 200ms ease; }
+    .practice-link:hover svg { transform: translateX(3px); }
 
     .capabilities {
       margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--stone);
@@ -703,9 +719,9 @@
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#technology">Technology</a></li>
-          <li><a href="#growth">Growth</a></li>
+          <li><a href="#growth">Marketing</a></li>
           <!-- <li><a href="#sdr">SDR &amp; BDR</a></li> -->
-          <li><a href="#industries">Industries</a></li>
+          <!-- <li><a href="#industries">Industries</a></li> -->
           <li><a href="#approach">Approach</a></li>
           <!-- <li><a href="#leadership">Leadership</a></li> — enable with the Leadership section below -->
           <li class="nav-cta-mobile"><a class="btn btn--fill" href="#contact">Speak with us</a></li>
@@ -726,11 +742,11 @@
     <section class="hero container" aria-labelledby="hero-title">
       <div class="hero-top">
         <div class="hero-copy">
-          <p class="label"><span class="dot dot--lg dot--ember" aria-hidden="true"></span>Management consultancy · Accra, Ghana</p>
-          <h1 id="hero-title" class="display">Bridging strategy and results across West&nbsp;Africa.</h1>
+          <p class="label"><span class="dot dot--lg dot--ember" aria-hidden="true"></span>Technology &amp; marketing consultancy · Accra, Ghana</p>
+          <h1 id="hero-title" class="display">Bridging technology and growth across West&nbsp;Africa.</h1>
         </div>
         <div class="hero-side">
-          <p>A powerhouse in consulting, innovation, design and transformation. We help businesses identify, address and eradicate their unique complexities — from strategy and change to managed IT, cloud and growth.</p>
+          <p>Managed IT, cybersecurity, cloud and data — paired with the marketing, brand and digital products that turn technology into growth. One senior-led team, from strategy through to day-to-day delivery.</p>
           <div class="btn-row">
             <a class="btn btn--fill" href="#contact">Start a conversation</a>
             <a class="btn btn--outline" href="#services">Explore our services</a>
@@ -747,11 +763,11 @@
           </div>
         </div>
         <div class="hero-pills">
-          <span class="pill"><span class="dot dot--blue" aria-hidden="true"></span>Your ambition</span>
-          <span class="pill"><span class="dot dot--ember" aria-hidden="true"></span>Measurable outcomes</span>
+          <span class="pill"><span class="dot dot--blue" aria-hidden="true"></span>Always-on technology</span>
+          <span class="pill"><span class="dot dot--ember" aria-hidden="true"></span>Measurable growth</span>
         </div>
         <ul class="stats" aria-label="BridgeMind at a glance">
-          <li class="stat"><div class="stat-num">3</div><div class="stat-lbl">sectors of deep expertise</div></li>
+          <li class="stat"><div class="stat-num">6</div><div class="stat-lbl">technology &amp; marketing practices</div></li>
           <li class="stat"><div class="stat-num">20+</div><div class="stat-lbl">years of combined leadership</div></li>
           <li class="stat"><div class="stat-num">1:1</div><div class="stat-lbl">senior partner attention</div></li>
           <li class="stat"><div class="stat-num">&lt;90<small> days</small></div><div class="stat-lbl">to a first measurable outcome</div></li>
@@ -765,28 +781,28 @@
         <div class="about-intro">
           <p class="label section-label">01 — About</p>
           <h2 id="about-title" class="h2">Small by design. Built for high-stakes questions.</h2>
-          <p>We provide a range of services that help businesses identify, address and eradicate their unique complexities and challenges — backed by over 20 years across digital transformation, enterprise technology, strategic sales and business development.</p>
+          <p>We help businesses run on technology that works and grow with marketing that performs — backed by over 20 years across digital transformation, enterprise technology, strategic sales and business development.</p>
         </div>
         <div class="principles">
           <div class="principle">
             <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L4 21l1.4-4.6A8.5 8.5 0 1 1 21 12z"/><path d="M8.5 10h7M8.5 14h5"/></svg>
             <span class="label">Advise</span>
-            <h3>Business &amp; Strategy Consulting</h3>
+            <h3>Technology &amp; Marketing Strategy</h3>
           </div>
           <div class="principle">
             <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68 1.65 1.65 0 0 0 10 3.17V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
             <span class="label">Implement</span>
-            <h3>Business &amp; Technology Project Implementation</h3>
+            <h3>Technology &amp; Digital Project Delivery</h3>
           </div>
           <div class="principle">
             <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
-            <span class="label">Optimise</span>
-            <h3>Business Process Mapping &amp; Improvement</h3>
+            <span class="label">Grow</span>
+            <h3>Digital Marketing &amp; Brand Growth</h3>
           </div>
           <div class="principle">
             <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21v-7M5 10V3M12 21v-9M12 8V3M19 21v-5M19 12V3M2 14h6M9 8h6M16 16h6"/></svg>
-            <span class="label">Shift</span>
-            <h3>Change Leadership &amp; Change Management</h3>
+            <span class="label">Manage</span>
+            <h3>Managed IT, Security &amp; Cloud</h3>
           </div>
         </div>
       </div>
@@ -799,11 +815,11 @@
         </div>
         <ul class="value-list">
           <li class="value-item"><span class="label">01</span>In-depth, collaborative analysis pinpoints the root of the problem</li>
-          <li class="value-item"><span class="label">02</span>One-of-a-kind solutions tailored to every client</li>
-          <li class="value-item"><span class="label">03</span>Increased efficiency and productivity</li>
-          <li class="value-item"><span class="label">04</span>Change-positive, cohesive workforce</li>
-          <li class="value-item"><span class="label">05</span>Future-fit processes, technology and people</li>
-          <li class="value-item"><span class="label">06</span>Organisational resilience</li>
+          <li class="value-item"><span class="label">02</span>Solutions tailored to every client — no off-the-shelf playbooks</li>
+          <li class="value-item"><span class="label">03</span>Secure, always-on systems with less downtime</li>
+          <li class="value-item"><span class="label">04</span>Marketing spend tied to measurable pipeline and revenue</li>
+          <li class="value-item"><span class="label">05</span>Future-fit technology, data and digital channels</li>
+          <li class="value-item"><span class="label">06</span>Teams equipped to run what we build</li>
         </ul>
       </div>
     </section>
@@ -813,40 +829,112 @@
       <div class="section-head">
         <div>
           <p class="label section-label">02 — Services</p>
-          <h2 id="services-title" class="h2">Three core practices. One accountable team.</h2>
+          <h2 id="services-title" class="h2">Six core practices. One accountable team.</h2>
         </div>
-        <p>Every engagement is led by a senior partner and drawn from the practices your question actually needs.</p>
+        <p>Technology and marketing under one roof — so the systems you run and the growth you chase are planned, built and measured together.</p>
       </div>
 
       <div class="practices">
         <article class="practice">
           <div class="practice-top">
-            <span class="label">01</span>
+            <span class="label practice-kind">01<span class="dot dot--blue" aria-hidden="true"></span>Technology</span>
+            <span class="icon-tile" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>
+          </div>
+          <div class="practice-body">
+            <h3>Technology Strategy &amp; Transformation</h3>
+            <p>Roadmaps that tie every technology decision to a business outcome — and the delivery muscle to see them through.</p>
+            <ul class="practice-list" aria-label="Technology Strategy &amp; Transformation services">
+              <li>IT strategy &amp; virtual CIO</li>
+              <li>Enterprise architecture &amp; ERP advisory</li>
+              <li>Digital transformation roadmaps</li>
+              <li>PMO &amp; programme delivery</li>
+            </ul>
+            <a class="practice-link" href="#technology">Explore technology <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+        <article class="practice">
+          <div class="practice-top">
+            <span class="label practice-kind">02<span class="dot dot--blue" aria-hidden="true"></span>Technology</span>
+            <span class="icon-tile" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg></span>
+          </div>
+          <div class="practice-body">
+            <h3>Managed IT &amp; Cloud</h3>
+            <p>Your IT department and cloud team in one — proactive, predictable and always on.</p>
+            <ul class="practice-list" aria-label="Managed IT &amp; Cloud services">
+              <li>Help desk &amp; 24/7 monitoring</li>
+              <li>Cloud migration on AWS, Azure &amp; GCP</li>
+              <li>DevOps &amp; infrastructure-as-code</li>
+              <li>Backup &amp; disaster recovery</li>
+            </ul>
+            <a class="practice-link" href="#technology">Explore managed services <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+        <article class="practice">
+          <div class="practice-top">
+            <span class="label practice-kind">03<span class="dot dot--blue" aria-hidden="true"></span>Technology</span>
+            <span class="icon-tile" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          </div>
+          <div class="practice-body">
+            <h3>Cybersecurity</h3>
+            <p>Round-the-clock protection across endpoints, network, cloud and identities — from detection to response.</p>
+            <ul class="practice-list" aria-label="Cybersecurity services">
+              <li>24/7 threat detection &amp; response</li>
+              <li>Vulnerability management</li>
+              <li>Email &amp; identity security</li>
+              <li>Incident response &amp; compliance</li>
+            </ul>
+            <a class="practice-link" href="#technology">Explore security <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+        <article class="practice">
+          <div class="practice-top">
+            <span class="label practice-kind">04<span class="dot dot--blue" aria-hidden="true"></span>Technology</span>
+            <span class="icon-tile" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9.5 9.5h5v5h-5z"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></span>
+          </div>
+          <div class="practice-body">
+            <h3>Data, AI &amp; Automation</h3>
+            <p>Turn the data you already have into decisions, and the work you repeat into workflows that run themselves.</p>
+            <ul class="practice-list" aria-label="Data, AI &amp; Automation services">
+              <li>Data platforms &amp; analytics</li>
+              <li>Dashboards &amp; business intelligence</li>
+              <li>AI, machine learning &amp; NLP</li>
+              <li>Robotic process automation</li>
+            </ul>
+            <a class="practice-link" href="#technology">Explore data &amp; AI <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+        <article class="practice">
+          <div class="practice-top">
+            <span class="label practice-kind">05<span class="dot dot--ember" aria-hidden="true"></span>Marketing</span>
             <span class="icon-tile" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
           </div>
           <div class="practice-body">
-            <h3>Strategy &amp; Growth</h3>
-            <p>Corporate strategy · West African market entry · Commercial due diligence · Operating model design</p>
+            <h3>Digital Marketing &amp; Growth</h3>
+            <p>Performance marketing built on data, so every cedi of spend can be traced to pipeline and revenue.</p>
+            <ul class="practice-list" aria-label="Digital Marketing &amp; Growth services">
+              <li>Paid search &amp; social advertising</li>
+              <li>SEO &amp; content marketing</li>
+              <li>Marketing automation &amp; CRM</li>
+              <li>Analytics &amp; attribution</li>
+            </ul>
+            <a class="practice-link" href="#growth">Explore marketing <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
         <article class="practice">
           <div class="practice-top">
-            <span class="label">02</span>
-            <span class="icon-tile" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8"/><path d="M12 16v4"/></svg></span>
+            <span class="label practice-kind">06<span class="dot dot--ember" aria-hidden="true"></span>Marketing</span>
+            <span class="icon-tile" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg></span>
           </div>
           <div class="practice-body">
-            <h3>Technology &amp; Digital</h3>
-            <p>IT strategy &amp; architecture · Cloud &amp; ERP advisory · Data &amp; AI enablement · Cybersecurity</p>
-          </div>
-        </article>
-        <article class="practice">
-          <div class="practice-top">
-            <span class="label">03</span>
-            <span class="icon-tile" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18"/><path d="M8 2v4M16 2v4"/><path d="M8 14l2 2 5-4"/></svg></span>
-          </div>
-          <div class="practice-body">
-            <h3>Project &amp; Programme</h3>
-            <p>PMO set-up · Transformation delivery · Vendor management · Independent project assurance</p>
+            <h3>Brand, CX &amp; Digital Products</h3>
+            <p>Brands people believe in and digital experiences they return to — designed around real customer needs.</p>
+            <ul class="practice-list" aria-label="Brand, CX &amp; Digital Products services">
+              <li>Brand strategy &amp; identity</li>
+              <li>Customer experience &amp; UX design</li>
+              <li>Web, mobile &amp; e-commerce builds</li>
+              <li>Product innovation</li>
+            </ul>
+            <a class="practice-link" href="#growth">Explore brand &amp; CX <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
       </div>
@@ -854,27 +942,25 @@
       <div class="capabilities">
         <div class="capabilities-intro">
           <h3>Specialist capabilities</h3>
-          <p>Deep expertise on call, from AI to forensics.</p>
+          <p>Deep expertise on call, from AI and cloud to brand and performance marketing.</p>
         </div>
         <ul aria-label="Specialist capabilities">
           <li class="tag">Artificial Intelligence</li>
-          <li class="tag">Business Transformation</li>
-          <li class="tag">Business Consulting</li>
+          <li class="tag">Cloud &amp; Software Development</li>
           <li class="tag">Cybersecurity &amp; Privacy</li>
-          <li class="tag">CX &amp; Digital Products</li>
+          <li class="tag">Data &amp; Analytics</li>
           <li class="tag">Digital Audit</li>
           <li class="tag">Digital Forensics</li>
-          <li class="tag">Digital Business Enablement</li>
           <li class="tag">Digital Workplace</li>
-          <li class="tag">Dispute Advisory</li>
-          <li class="tag">E-Discovery &amp; Legal Analytics</li>
-          <li class="tag">Risk &amp; Compliance</li>
+          <li class="tag">Digital Business Enablement</li>
           <li class="tag">IT Strategy &amp; Innovation</li>
-          <li class="tag">Cloud &amp; Software Development</li>
-          <li class="tag">Enterprise Management</li>
-          <li class="tag">Mergers &amp; Acquisitions</li>
-          <li class="tag">Procurement</li>
-          <li class="tag">Organisation &amp; Talent</li>
+          <li class="tag">Business Transformation</li>
+          <li class="tag">CX &amp; Digital Products</li>
+          <li class="tag">Performance Marketing</li>
+          <li class="tag">Marketing Automation</li>
+          <li class="tag">SEO &amp; Content</li>
+          <li class="tag">Social Media Marketing</li>
+          <li class="tag">E-commerce</li>
         </ul>
       </div>
     </section>
@@ -999,8 +1085,8 @@
     <section id="growth" class="section container" aria-labelledby="growth-title">
       <div class="section-head">
         <div>
-          <p class="label section-label">04 — Growth &amp; marketing</p>
-          <h2 id="growth-title" class="h2">Where strategy meets humanity.</h2>
+          <p class="label section-label">04 — Marketing &amp; growth</p>
+          <h2 id="growth-title" class="h2">Marketing that earns attention — and proves its return.</h2>
         </div>
         <p>Customer, commercial and brand work that drives growth today and builds the loyalty that sustains it tomorrow.</p>
       </div>
@@ -1075,11 +1161,11 @@
       </div>
     </section> -->
 
-    <!-- ===================== INDUSTRIES ===================== -->
+    <!-- ===================== INDUSTRIES (commented out) =====================
     <section id="industries" class="section container" aria-labelledby="industries-title">
       <div class="section-head">
         <div>
-          <p class="label section-label">06 — Industries</p>
+          <p class="label section-label">05 — Industries</p>
           <h2 id="industries-title" class="h2">Three sectors of depth. Experience across many more.</h2>
         </div>
       </div>
@@ -1087,17 +1173,17 @@
         <div class="industry">
           <span class="label" aria-hidden="true">A</span>
           <h3>Financial Services</h3>
-          <p>Banking &amp; capital markets, insurance and fintech — finance transformation, risk and regulatory change.</p>
+          <p>Banking &amp; capital markets, insurance and fintech — digital channels, core-system modernisation, cybersecurity and customer acquisition.</p>
         </div>
         <div class="industry">
           <span class="label" aria-hidden="true">B</span>
           <h3>Information Technology</h3>
-          <p>High-tech and telecoms — go-to-market, enterprise platforms, cloud and cybersecurity.</p>
+          <p>High-tech and telecoms — go-to-market and demand generation, enterprise platforms, cloud and cybersecurity.</p>
         </div>
         <div class="industry">
           <span class="label" aria-hidden="true">C</span>
           <h3>Energy &amp; Resources</h3>
-          <p>Energy, utilities and resources — operating models, programme delivery and procurement.</p>
+          <p>Energy, utilities and resources — OT and IT security, cloud, data and digital operations.</p>
         </div>
       </div>
       <div class="also-serving">
@@ -1110,14 +1196,14 @@
         <span class="chip">Retail</span>
         <span class="chip">Public Sector</span>
       </div>
-    </section>
+    </section> -->
 
     <!-- ===================== APPROACH ===================== -->
     <section id="approach" class="approach" aria-labelledby="approach-title">
       <div class="container">
         <div class="section-head">
           <div>
-            <p class="label section-label">07 — Approach</p>
+            <p class="label section-label">05 — Approach</p>
             <h2 id="approach-title" class="h2">From first conversation to lasting capability.</h2>
           </div>
           <span class="pill"><span class="dot dot--lg dot--blue" aria-hidden="true"></span>First measurable outcome in under 90 days</span>
@@ -1158,13 +1244,13 @@
     <!-- ===================== LEADERSHIP =====================
          Hidden until partner names and photos are ready.
          To enable: uncomment this block and the nav link above,
-         then renumber Contact to "09 — Speak with us".
+         then renumber Contact to "07 — Speak with us".
          Replace each .orb with <img src="…" alt="Partner name"> when photos exist.
 
     <section id="leadership" class="section container" aria-labelledby="leadership-title">
       <div class="section-head">
         <div>
-          <p class="label section-label">08 — Leadership</p>
+          <p class="label section-label">06 — Leadership</p>
           <h2 id="leadership-title" class="h2">The partners you meet are the partners who deliver.</h2>
         </div>
       </div>
@@ -1199,7 +1285,7 @@
       <div class="contact">
         <div class="contact-info">
           <div>
-            <p class="label section-label">08 — Speak with us</p>
+            <p class="label section-label">06 — Speak with us</p>
             <h2 id="contact-title" class="h2">Bring us the question that keeps you up.</h2>
             <p class="lede">A senior partner replies within two business days.</p>
           </div>
@@ -1247,14 +1333,13 @@
           <fieldset>
             <legend>Topic</legend>
             <div class="topic-options">
-              <label class="topic"><input type="radio" name="topic" value="Strategy & Growth" checked />Strategy &amp; Growth</label>
-              <label class="topic"><input type="radio" name="topic" value="Project & Programme" />Project &amp; Programme</label>
+              <label class="topic"><input type="radio" name="topic" value="Technology Strategy" checked />Technology strategy</label>
               <label class="topic"><input type="radio" name="topic" value="Managed IT (MSP)" />Managed IT</label>
-              <label class="topic"><input type="radio" name="topic" value="Managed Security (MSSP)" />Cybersecurity</label>
               <label class="topic"><input type="radio" name="topic" value="Cloud Services" />Cloud</label>
-              <label class="topic"><input type="radio" name="topic" value="IT Consulting & Digital Transformation" />IT Consulting &amp; Digital</label>
-              <label class="topic"><input type="radio" name="topic" value="Marketing & Growth" />Marketing &amp; Growth</label>
-              <!-- <label class="topic"><input type="radio" name="topic" value="SDR & BDR" />SDR &amp; BDR</label> -->
+              <label class="topic"><input type="radio" name="topic" value="Cybersecurity" />Cybersecurity</label>
+              <label class="topic"><input type="radio" name="topic" value="Data, AI & Automation" />Data &amp; AI</label>
+              <label class="topic"><input type="radio" name="topic" value="Digital Marketing & Growth" />Digital marketing</label>
+              <label class="topic"><input type="radio" name="topic" value="Brand, CX & Digital Products" />Brand &amp; digital products</label>
               <label class="topic"><input type="radio" name="topic" value="Not sure yet" />Not sure yet</label>
             </div>
           </fieldset>
@@ -1285,7 +1370,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="#top" aria-label="BridgeMind Consult — back to top"><img src="logo.png" alt="BridgeMind Consult" width="73" height="56" loading="lazy" /></a>
-        <p>Senior-led management consulting for West Africa.</p>
+        <p>Senior-led technology and marketing consultancy for West Africa.</p>
       </div>
       <nav class="footer-col" aria-label="Firm">
         <span class="label">FIRM</span>
@@ -1295,11 +1380,11 @@
       </nav>
       <nav class="footer-col" aria-label="Expertise">
         <span class="label">EXPERTISE</span>
-        <a href="#services">Consulting</a>
+        <a href="#services">Core practices</a>
         <a href="#technology">Technology &amp; managed services</a>
-        <a href="#growth">Growth &amp; marketing</a>
+        <a href="#growth">Marketing &amp; growth</a>
         <!-- <a href="#sdr">SDR &amp; BDR</a> -->
-        <a href="#industries">Industries</a>
+        <!-- <a href="#industries">Industries</a> -->
       </nav>
       <div class="footer-col">
         <span class="label">CONTACT</span>
